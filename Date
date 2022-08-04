@@ -1,0 +1,60 @@
+package Lesson1.HomeWork;
+
+public class Date {
+    private int year;
+    private int month;
+    private int day;
+
+    public Date(int year, int month, int day) {
+        this.year = year;
+        this.month = month;
+        this.day = day;
+    }
+
+    @Override
+    public String toString() {
+        for (; month < 10 && day < 10;) {
+            return "Date is " + year + "-" + "0" + month + "-" + "0" + day + ".";}
+                for (; month < 10;) {
+                    return "Date is " + year + "-" + "0" + month + "-" + day + ".";}
+                    for (; day < 10;) {
+                        return "Date is " + year + "-" + month + "-" + "0" + day + ".";}
+
+                return "Date is " + year + "-" + month + "-" + day + ".";
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public static void main(String[] args) {
+        Date date = new Date(1991, 10, 14);
+        System.out.println(date);
+        Date date2 = new Date(1991, 3, 4);
+        System.out.println(date2);
+        Date date3 = new Date(1991, 3, 22);
+        System.out.println(date3);
+        Date date4 = new Date(1991, 11, 1);
+        System.out.println(date4);
+    }
+}
